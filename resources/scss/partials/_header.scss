@@ -1,4 +1,31 @@
-section.logo img{
-    height: 90px;
-    margin-bottom: 2rem;
-}
+    // Use StyleSheets
+    @use './variables' as *;
+    @use './mixins' as *;
+
+
+    #container {
+        width: 80%;
+        margin: 0 auto;
+        margin: 0 1rem;
+        @include flex(row,space-between,center);
+    }
+
+    .logo img{
+        height: 80px;
+    }
+
+    ul {
+        @include flex(row,space-between,center);
+        list-style-type:none ;
+    }
+
+    li{
+        font-size: 1.2rem;
+        padding: 3rem 1rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-transform: uppercase;
+        &:hover{
+            color: #0282f9;
+            border-bottom: 5px solid #0282f9;
+        }
+    }
